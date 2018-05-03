@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1525295252 source:c:\users\sebas\desktop\pruebanumero1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1525296424 source:c:\users\sebas\desktop\pruebanumero1\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1525294978 c:\users\sebas\desktop\pruebanumero1\funciones.h
+
+1525356237 source:c:\users\alumno\desktop\workspaceclase7git-master\pruebanumero1\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1525309290 c:\users\alumno\desktop\workspaceclase7git-master\pruebanumero1\funciones.h
+
+1525309290 source:c:\users\alumno\desktop\workspaceclase7git-master\pruebanumero1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1525348269 source:c:\users\alumno\desktop\workspaceclase7git-master\pruebanumero1\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+
+1525347922 c:\users\alumno\desktop\workspaceclase7git-master\pruebanumero1\validaciones.h
+

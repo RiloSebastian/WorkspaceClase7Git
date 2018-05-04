@@ -5,11 +5,19 @@
 	<string.h>
 	"funciones.h"
 
-1525296424 source:c:\users\sebas\desktop\pruebanumero1\funciones.c
+1525387330 source:c:\users\sebas\desktop\pruebanumero1\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"funciones.h"
 
 1525294978 c:\users\sebas\desktop\pruebanumero1\funciones.h
+
+1525367940 source:c:\users\sebas\desktop\pruebanumero1\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+
+1525367927 c:\users\sebas\desktop\pruebanumero1\validaciones.h
 

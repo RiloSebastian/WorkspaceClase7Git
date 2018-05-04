@@ -6,17 +6,17 @@
 #define OCUPADO 1
 #define LIBRE 0
 
-
+/**
 void validarnombre(ePersona persona[]){
 
  char aux[50];
  gets(persona.nombre);
  strlen(persona.nombre);
-
-
-
-
-
-
-
 }
+
+*/
+
+
+
+
+

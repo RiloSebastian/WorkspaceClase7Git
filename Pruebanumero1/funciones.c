@@ -81,58 +81,66 @@ void mostrarListaPorNombre(ePersona persona[], int cant){
 int i;
 int j;
 int k;
-char auxnombre[20][50];
+char auxnombre[50];
 
 for(i=0;i<20-1;i++){
+if(persona[i].estado==OCUPADO){
     for(j=i+1;j<20;j++){
-        if(strcmp(persona[i].nombre,persona[j].nombre)==1){
-
-            strcpy(auxnombre[i], persona[i].nombre);
-            strcpy(persona[i].nombre, persona[j].nombre);
-            strcpy(persona[j].nombre, auxnombre[i]);
-
-        }
-    }
-}
-for(k=0;k<20;k++){
-   if(persona[k].estado==OCUPADO){
-    printf("\n %s ", persona[k].nombre);
+        if(strcmp(persona[j].nombre,persona[i].nombre)<0 && persona[j].estado==OCUPADO){
+            strcpy(auxnombre, persona[j].nombre);
+            strcpy(persona[j].nombre, persona[i].nombre);
+            strcpy(persona[i].nombre, auxnombre);
    }
+  }
+ }
 }
+
+for(k=0;k<20;k++){
+    if(persona[k].estado==OCUPADO){
+     printf("\n %s \n ", persona[k].nombre);
+  }
+ }
 }
 
 void mostrarGrafico(ePersona persona[], int cant){
     int i;
     int j;
-    int menos18=0;
-    int entre19Y35=0;
-    int masDe35=0;
+    int menos18=0, entre18y35=0, mas35=0, contOcupado=0;
 
-    for(i=0; i<20; i++){
-        if(persona[i].estado==OCUPADO && persona[i].edad<18){
-            menos18++;
-        }
-        else if(persona[i].estado==OCUPADO && persona[i].edad>35){
-            masDe35++;
-        }
-        else if(persona[i].estado==OCUPADO && persona[i].edad<36 && persona[i].edad>17){
-            entre19Y35++;
-        }
-    }
-char demenos18[menos18][2];
-char deEntre19y35[entre19Y35][2];
-char demas35[masDe35][2];
-
-    for(j=19; j>=0; j--){
-
-        strcpy(demenos18[j],"*");
-        strcpy(deEntre19y35[j],"*");
-        strcpy(demas35[j],"*");
-        printf("%s   %s   %s\n", demenos18, entre19Y35, masDe35);
-
-
-    }
-
+    for(i=0;i<cant;i++){
+            if(persona[i].estado==OCUPADO){
+                if(persona[i].edad<18){
+                menos18++;
+                }
+                else if(persona[i].edad>35){
+                    mas35++;
+                }
+                else{
+                    entre18y35++;
+                }
+               contOcupado++;
+            }
+      }
+      for(j=contOcupado; j>=0;j--){
+            if(menos18<=j){
+                printf("     ");
+            }
+            else{
+                printf("  *  ");
+            }
+            if(entre18y35<=j){
+                printf("     ");
+            }
+            else{
+                printf("  *  ");
+            }
+            if(mas35<=j){
+                printf("     \n");
+            }
+            else{
+                printf("  *  \n");
+            }
+      }
+      printf("<18 18><35 >35\n\n");
 
 }
-
